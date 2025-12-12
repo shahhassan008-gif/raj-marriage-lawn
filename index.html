@@ -1052,54 +1052,51 @@
             package options.
           </p>
 
-          <!--
-            FORM NOTE:
-            - For live use, set action to your backend or a form service (e.g. Formspree).
-          -->
-          <form action="#" method="post">
-            <div>
-              <label for="name">Name*</label>
-              <input id="name" name="name" type="text" required placeholder="Your full name" />
-            </div>
-            <div>
-              <label for="phone">Phone number*</label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                required
-                placeholder="WhatsApp or mobile number"
-              />
-            </div>
-            <div>
-              <label for="date">Event date (approx.)</label>
-              <input id="date" name="date" type="date" />
-            </div>
-            <div>
-              <label for="guests">No. of guests</label>
-              <input
-                id="guests"
-                name="guests"
-                type="number"
-                min="50"
-                placeholder="e.g. 200"
-              />
-            </div>
-            <div>
-              <label for="message">Event details</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Wedding / reception / birthday, timing preference, special requests..."
-              ></textarea>
-            </div>
-            <button type="submit" class="btn-primary">
-              <form action="https://formsubmit.co/shahhassan008@gmail.com" method="POST">
-          <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_subject" value="New enquiry from Raj Marriage Lawn website">
-              ✉️ Send enquiry
-            </button>
+          <form id="enquiryForm" action="https://formsubmit.co/shahhassan008@gmail.com" method="POST" autocomplete="on">
+  <!-- FormSubmit settings -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_subject" value="New enquiry from Raj Marriage Lawn website">
+
+  <div class="form-row">
+    <label for="full_name">Name</label>
+    <input id="full_name" name="full_name" type="text" placeholder="Your full name" required>
+  </div>
+
+  <div class="form-row">
+    <label for="phone">Phone / WhatsApp</label>
+    <input id="phone" name="phone" type="tel" placeholder="WhatsApp or mobile number" required>
+  </div>
+
+  <div class="form-row">
+    <label for="event_date">Event date (approx.)</label>
+    <input id="event_date" name="event_date" type="text" placeholder="dd-mm-yyyy">
+  </div>
+
+  <div class="form-row">
+    <label for="guests">No. of guests</label>
+    <input id="guests" name="guests" type="number" min="1" placeholder="e.g. 200">
+  </div>
+
+  <div class="form-row">
+    <label for="message">Event details</label>
+    <textarea id="message" name="message" placeholder="Wedding / reception / birthday, timing preference, special requests..." rows="4"></textarea>
+  </div>
+
+  <div class="form-row">
+    <!-- IMPORTANT: this submit button must be INSIDE the form -->
+    <button type="submit" class="btn-primary">Send enquiry</button>
+  </div>
+</form>
+
+<!-- WhatsApp quick link (optional) -->
+<p>
+  Or contact directly on WhatsApp:
+  <a href="https://wa.me/918299186607?text=Hi%2C%20I%20want%20to%20check%20availability%20for%20Raj%20Marriage%20Lawn" target="_blank" rel="noopener">
+    Chat on WhatsApp (8299186607)
+  </a>
+</p>
+<!-- END: Enquiry form -->
         </div>
 
         <div>
