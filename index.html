@@ -1070,7 +1070,13 @@
 
   <div class="form-row">
     <label for="event_date">Event date (approx.)</label>
-    <input id="event_date" name="event_date" type="text" placeholder="dd-mm-yyyy">
+    <input
+  id="event_date"
+  name="event_date"
+  type="date"
+  min="today"
+  required
+>
   </div>
 
   <div class="form-row">
@@ -1152,6 +1158,12 @@
     // Simple script to keep the year updated
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  <script>
+  // Disable past dates in enquiry form
+  const today = new Date().toISOString().split("T")[0];
+  document.getElementById("event_date").min = today;
+</script>
 </body>
 </html>
 <!-- NAV BAR BUTTON -->
